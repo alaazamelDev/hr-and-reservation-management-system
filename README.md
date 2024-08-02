@@ -1,4 +1,4 @@
-# HR and Consultation Management API
+# HR and Reservation Management System API
 
 | | |
 |-|-| 
