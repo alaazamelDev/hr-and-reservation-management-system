@@ -1,66 +1,87 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# HR and Reservation Management System API
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+| | |
+|-|-| 
+|![Dashboard & Statistics](https://github.com/alaazamelDev/hr-consultation-management/blob/main/preview/dashboard_preview.png?raw=true)|![Customer Profile Preview](https://github.com/alaazamelDev/hr-consultation-management/blob/main/preview/customer_preview.png?raw=true)|
+|<div align="center">Dashboard & Statistics</div>|<div align="center">Customer Profile Preview</div>|
+|![Consultant Timesheet](https://github.com/alaazamelDev/hr-consultation-management/blob/main/preview/time_sheet.png?raw=true)|![Add Job Application From](https://github.com/alaazamelDev/hr-consultation-management/blob/main/preview/job_application.png?raw=true)|  
+|<div align="center">Consultant Timesheet</div>|<div align="center">Add Job Application From</div>|
 
-## About Laravel
+## Overview
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+This API provides the backend and integrations for an HR and Consultation Management application used by QIAM Center. It handles user management, permissions, HR functions like recruitment and attendance tracking as well as a consultation booking system. 
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+The API is built using:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- Laravel
+- MySQL
+- Firebase Cloud Messaging
+- Email APIs
 
-## Learning Laravel
+The repo contains the full API code as well as documentation.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Features
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- User authentication and permissions management
+- Recruitment and applicant tracking 
+- Employee profiles, attendance, leave tracking
+- Role-based access control
+- Consultant schedules and availability
+- Customer appointment booking system
+- Push notifications and email integrations
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Documentation
 
-## Laravel Sponsors
+The full API documentation can be found at:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+- [HR Module Documentation][hr-docs]
 
-### Premium Partners
+- [Consultation Module Documentation][consult-docs]
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+[hr-docs]: https://documenter.getpostman.com/view/10175953/2s93eZyrzB
+[consult-docs]: https://documenter.getpostman.com/view/27451041/2s9XxyQYSw
+
+## Usage
+
+To use the API:
+
+1. Clone the repository
+2. Configure your database credentials and API keys in `.env`
+3. Run `composer install`
+4. Run migrations:
+
+   - Basic migrations:
+    
+       ```bash
+       php artisan migrate
+       ```
+
+   - HR module migrations:
+   
+       ```bash  
+       php artisan migrate --path=database/migrations/HR
+       ```
+       
+   - CD module migrations:
+   
+       ```bash
+       php artisan migrate --path=database/migrations/CD
+       ```
+5. Seed database:
+
+   ```bash
+   php artisan db:seed
+
+6. Run `php artisan serve` to run the API locally
 
 ## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Please make sure to update tests as appropriate.
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+[MIT](https://choosealicense.com/licenses/mit/)
+
+Let me know if you would like me to modify or expand this README further. I aimed to create a professional, high-quality README showcasing the key information about the project in a concise and appealing way.
