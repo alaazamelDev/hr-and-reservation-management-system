@@ -2,11 +2,11 @@
 
 | | |
 |-|-|
-|![System Log](https://github.com/alaazamelDev/hr-consultation-management/blob/main/preview/system_log.png?raw=true)|![Dashboard](https://github.com/alaazamelDev/hr-consultation-management/blob/main/preview/dashboard_preview.png?raw=true)|
+|![System Log](/images/log.png)|![Dashboard](/images/dashboard.png)|
 |System Log|Dashboard|
-|![Check Attendance History](https://github.com/alaazamelDev/hr-consultation-management/blob/main/preview/attendance_history.png?raw=true)|![Create new Job Application](https://github.com/alaazamelDev/hr-consultation-management/blob/main/preview/job_application.png?raw=true)|
+|![Check Attendance History](/images/attendance-history.png)|![Create new Job Application](/images/job-application.png)|
 |Check Attendance History|Create new Job Application|
-|![Define new Role and set permissions](https://github.com/alaazamelDev/hr-consultation-management/blob/main/preview/define_role.png?raw=true)|![Update Role Permissions](https://github.com/alaazamelDev/hr-consultation-management/blob/main/preview/update_permissions.png?raw=true)|
+|![Define new Role and set permissions](/images/new-role.png)|![Update Role Permissions](/images/update-role.png)|
 |Define new Role and set permissions|Update Role Permissions|
 
 ## Overview
@@ -43,7 +43,7 @@ The monolithic architecture allows for:
 
 While this architecture serves our current needs effectively, it's designed with modularity in mind to allow for potential future migration to a microservices architecture if required.
 
-[Insert architecture diagram here]
+![System Architecture](/images/architecture.png)
 
 ## Demo
 
