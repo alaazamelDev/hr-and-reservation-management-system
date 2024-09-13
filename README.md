@@ -1,18 +1,19 @@
 # HR and Reservation Management System API
 
 | | |
-|-|-| 
-|![Dashboard & Statistics](https://github.com/alaazamelDev/hr-consultation-management/blob/main/preview/dashboard_preview.png?raw=true)|![Customer Profile Preview](https://github.com/alaazamelDev/hr-consultation-management/blob/main/preview/customer_preview.png?raw=true)|
-|<div align="center">Dashboard & Statistics</div>|<div align="center">Customer Profile Preview</div>|
-|![Consultant Timesheet](https://github.com/alaazamelDev/hr-consultation-management/blob/main/preview/time_sheet.png?raw=true)|![Add Job Application From](https://github.com/alaazamelDev/hr-consultation-management/blob/main/preview/job_application.png?raw=true)|  
-|<div align="center">Consultant Timesheet</div>|<div align="center">Add Job Application From</div>|
+|-|-|
+|![System Log](https://github.com/alaazamelDev/hr-consultation-management/blob/main/preview/system_log.png?raw=true)|![Dashboard](https://github.com/alaazamelDev/hr-consultation-management/blob/main/preview/dashboard_preview.png?raw=true)|
+|System Log|Dashboard|
+|![Check Attendance History](https://github.com/alaazamelDev/hr-consultation-management/blob/main/preview/attendance_history.png?raw=true)|![Create new Job Application](https://github.com/alaazamelDev/hr-consultation-management/blob/main/preview/job_application.png?raw=true)|
+|Check Attendance History|Create new Job Application|
+|![Define new Role and set permissions](https://github.com/alaazamelDev/hr-consultation-management/blob/main/preview/define_role.png?raw=true)|![Update Role Permissions](https://github.com/alaazamelDev/hr-consultation-management/blob/main/preview/update_permissions.png?raw=true)|
+|Define new Role and set permissions|Update Role Permissions|
 
 ## Overview
 
 This API provides the backend and integrations for an HR and Consultation Management application used by QIAM Center. It handles user management, permissions, HR functions like recruitment and attendance tracking as well as a consultation booking system. 
 
 The API is built using:
-
 - Laravel
 - MySQL
 - Firebase Cloud Messaging
@@ -30,12 +31,42 @@ The repo contains the full API code as well as documentation.
 - Customer appointment booking system
 - Push notifications and email integrations
 
+## System Architecture
+
+Our HR and Reservation Management System API follows a monolithic architecture, providing a unified and integrated solution for all functionalities. This approach offers simplicity in development, deployment, and maintenance, making it suitable for our current scale and requirements.
+
+The monolithic architecture allows for:
+- Centralized data management
+- Simplified development and testing processes
+- Easier deployment and scaling as a single unit
+- Efficient inter-module communication
+
+While this architecture serves our current needs effectively, it's designed with modularity in mind to allow for potential future migration to a microservices architecture if required.
+
+[Insert architecture diagram here]
+
+## Demo
+
+You can access a live demo of the system at the following URL:
+
+https://qiam-dashboard.vercel.app/login
+
+To explore the system's functionality, you can use the following test credentials:
+
+### Employee Login
+- Username: hadi2
+- Password: 12341234
+
+### Consultant Login
+- Username: tester
+- Password: 12341234
+
+Feel free to explore the different features and functionalities available to each user type.
+
 ## Documentation
 
 The full API documentation can be found at:
-
 - [HR Module Documentation][hr-docs]
-
 - [Consultation Module Documentation][consult-docs]
 
 [hr-docs]: https://documenter.getpostman.com/view/10175953/2s93eZyrzB
@@ -49,13 +80,11 @@ To use the API:
 2. Configure your database credentials and API keys in `.env`
 3. Run `composer install`
 4. Run migrations:
-
    - Basic migrations:
     
        ```bash
        php artisan migrate
        ```
-
    - HR module migrations:
    
        ```bash  
@@ -68,10 +97,9 @@ To use the API:
        php artisan migrate --path=database/migrations/CD
        ```
 5. Seed database:
-
    ```bash
    php artisan db:seed
-
+   ```
 6. Run `php artisan serve` to run the API locally
 
 ## Contributing
@@ -83,5 +111,3 @@ Please make sure to update tests as appropriate.
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
-
-Let me know if you would like me to modify or expand this README further. I aimed to create a professional, high-quality README showcasing the key information about the project in a concise and appealing way.
