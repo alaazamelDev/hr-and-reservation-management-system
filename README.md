@@ -65,12 +65,18 @@ Feel free to explore the different features and functionalities available to eac
 
 ## Documentation
 
+### API Documentation
 The full API documentation can be found at:
 - [HR Module Documentation][hr-docs]
 - [Consultation Module Documentation][consult-docs]
 
+### Project Documentation
+The detailed project documentation, including architecture, features, and usage instructions, can be found at:
+- [Full Project Documentation][project-docs]
+
 [hr-docs]: https://documenter.getpostman.com/view/10175953/2s93eZyrzB
 [consult-docs]: https://documenter.getpostman.com/view/27451041/2s9XxyQYSw
+[project-docs]: https://docs.google.com/document/d/1Sc1FlDAwyRP9yW4sMIynFmV5ExBOZRn73hM9chLZX3Q/edit?usp=sharing
 
 ## Usage
 
